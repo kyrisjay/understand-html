@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>样式的继承</title>
+    <style>
+        #h1{
+            font-weight:bold;
+            text-decoration:underline;
+            height:3em;
+        }
+        .body{
+            font-style: italic;
+            color: red;
+            height:3em;
+        }
+        #title{
+            font-style: italic;
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>第一行</li>
+        <li id="h1">第二行</li>
+
+        <li>第三行</li>
+        <li class="body">第四行</li>
+
+        <li>第五行</li>
+        <li id="title">第六行</li>
+    </ul>
+
+</body>
+</html>
