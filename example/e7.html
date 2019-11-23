@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全选</title>
+</head>
+<body>
+    <input type="checkbox" onchange="allS()" id="allSelect"/>全选
+    <div id="inputGroup">
+        <input type="checkbox" name="lau"/>javascript
+        <input type="checkbox" name="lau"/>css
+    </div>
+
+    <script>
+        function allS() {
+            var selects=document.getElementsByName("lau");
+            if(document.getElementById("allSelect").checked) {
+                for (var i = 0; i < 2; i++) {
+                    selects[i].checked = true;
+                }
+            }
+                else{
+                    for(var i=0;i<2;i++){
+                        selects[i].checked=false;
+                    }
+                }
+        }
+    </script>
+</body>
+</html>
