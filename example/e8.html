@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="demo"></div>
+<script type="text/javascript" src="./jquery.js"></script>
+<script>
+    var xajax=new XMLHttpRequest();
+    xajax.onreadystatechange = function () {
+        if(this.readyState === 4 && this.status === 200){
+            document.getElementById('demo').innerText = this.responseText
+            //$('demo').html(this.responseText);
+        }
+    }
+    xajax.open('POST','http://192.168.10.198:24200/createInfo',true);
+    xajax.setRequestHeader("Content-type","application/x-www-form-Urlencoded;charset=UTF-8");
+    xajax.send('name=沙天杰');
+</script>
+</body>
+</html>
