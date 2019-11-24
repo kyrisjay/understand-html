@@ -8,12 +8,12 @@
 <div id="demo"></div>
 <script type="text/javascript" src="jquery-3.4.1.js"></script>
 <script>
-
+    
     var xajax=new XMLHttpRequest();
     xajax.onreadystatechange = function () {
         if(this.readyState === 4 && this.status === 200){
             document.getElementById('demo').innerText = this.responseText
-            $('demo').html(this.responseText);
+            $.post ('demo').html(this.responseText);
         }
     }
     xajax.open('POST','http://192.168.10.198:24200/createInfo',true);
