@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/understandhtml.iml" filepath="$PROJECT_DIR$/understandhtml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/understand-html.iml" filepath="$PROJECT_DIR$/understand-html.iml" />
     </modules>
   </component>
 </project>
