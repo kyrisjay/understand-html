@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-</head>
     <style>
         #h1{
             width: 100%;
@@ -33,10 +32,10 @@
             color: #f3f3f3;
             margin-top: 1%;
         }
-        table{
+        #table1{
             width:100%;
             border-collapse:collapse;
-            margin-top: 5%;
+
             table-layout: fixed;
         }
         thead{
@@ -46,25 +45,73 @@
         }
         tr{
             height: 50px;
-            list-style: ;
+        }
+        #table2{
+            width: 100%;
+            height: 300px;
+            z-index:2;
         }
 
-
+        #t2{
+            color: red;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .mengban{
+            position:absolute;
+            background-color: #999999;
+            top:0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity:80%;
+        }
+        div#html{
+           display:none;
+        }
+        #html2{
+            padding: 30px;
+            width: 50%;
+            margin: 0 auto;
+            background: white;
+            position: absolute;
+            left: 25%;
+            top: 25%;
+        }
+        #true{
+            background-color: dodgerblue;
+            border-radius: 10%;
+            float: right;
+            height: 20px;
+            width: 30px;
+            color: white;
+        }
+        #close{
+            background-color: dodgerblue;
+            border-radius: 10%;
+            float: right;
+            height: 20px;
+            width: 30px;
+            color: white;
+        }
     </style>
+</head>
 <body>
+<div>
     <div id="h1"></div>
     <div id="h2"></div>
     <div id="h3">人员列表</div>
-    <div><button id="h4">添加人员</button></div>
+    <button id="h4" onclick="javascript:openDiv()">添加人员</button>
 
-    <table>
+    <table id="table1">
     <thead>
      <tr>
         <td><div style="margin-left: 10px">人员名称</div></td>
          <td>年龄</td>
          <td>编号</td>
          <td>操作</td>
-         <td>删除</td>
      </tr>
     </thead>
     <tbody>
@@ -75,5 +122,48 @@
         </tr>
     </tbody>
     </table>
+</div>
+    <div id="html">
+        <div class="mengban">
+        </div>
+        <div id="html2">添加人员
+            <hr>
+            <table id="table2">
+
+                <tbody>
+                <tr>
+                    <td   align="right" id="t2">*</td>
+                    <td   align="right">人员名称:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td  align="right">年龄:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td  align="right">编号:</td>
+                    <td><input type="text"></td>
+                </tr>
+                </tbody>
+            </table>
+            <hr>
+            <button id="close" onclick="javascript:closeDiv()">退出</button>
+            <button id="true" >确定</button>
+
+        </div>
+    </div>
+
+    <script>
+        function openDiv() {
+            document.getElementById("html").style.display="block";
+            document.getElementById("h4").style.display="none";
+        }
+        function closeDiv() {
+            document.getElementById("html").style.display="none";
+            document.getElementById("h4").style.display="block";
+        }
+    </script>
 </body>
 </html>
