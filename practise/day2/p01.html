@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #window2{
+            margin: 20px;
+        }
+
+        #tu{
+            width: 5px;
+            height: 25px;
+            background-color: dodgerblue;
+            float: left;
+            margin: 5px;
+        }
+        #open{
+            float: right;
+            background-color: dodgerblue;
+            height: 25px;
+            font-size: 13px;
+            color: white;
+            border-radius: 10%;
+            margin: 5px;
+        }
+        #close{
+            float: right;
+            background-color: dodgerblue;
+            height: 30px;
+            width: 55px;
+            font-size: 13px;
+            color: white;
+            border-radius: 10%;
+            margin: 20px 5px 5px 5px;
+        }
+        #true{
+            float: right;
+            background-color: dodgerblue;
+            height: 30px;
+            width: 55px;
+            font-size: 13px;
+            color: white;
+            border-radius: 10%;
+            margin: 20px 5px 5px 5px;
+        }
+        #table1{
+            margin: 10px;
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            border-bottom: rgb(250,250,250);
+        }
+        #table1>thead{
+            background: rgb(250,250,250);
+        }
+        #table1>tr{
+            width: 25%;
+            height: 20%;
+        }
+        #del{
+            float: left;
+        }
+        #t1{
+            color: brown;
+        }
+        #table2{
+            width: 100%;
+            height: 200px;
+            z-index: 2;
+        }
+        input{
+            width: 500px;
+        }
+        div#window1{
+            padding: 30px;
+            margin: 0 auto;
+            background: white;
+            position: absolute;
+            left: 25%;
+            top: 5%;
+        }
+        div#window{
+            display: none;
+        }
+        .mengban{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(89,89,89,.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="window2">
+<div id="tu"></div>&nbsp人员列表
+<button id="open" onclick="javascript: openDiv();">添加人员</button>
+<table id="table1">
+    <thead>
+    <tr>
+        <td>人员名称</td>
+        <td>年龄</td>
+        <td>编号</td>
+        <td>操作</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>李四</td>
+        <td>23</td>
+        <td>123456</td>
+        <td>
+            <div id="del">删除</div>
+            <div id="update">修改</div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</div>
+<div id="window">
+<div class="mengban">
+</div>
+<div id="window1">
+    添加人员
+    <hr>
+    <table id="table2">
+        <tbody>
+        <tr>
+            <td id="t1" >*</td>
+            <td align="right">人员名称：</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td align="right">年龄：</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td align="right">年龄：</td>
+            <td><input type="text"></td>
+        </tr>
+        </tbody>
+    </table>
+    <hr>
+    <button id="close" onclick="javascript: closeDiv();">退出</button>
+    <button id="true">确定</button>
+</div>
+</div>
+<script>
+    function openDiv(){
+        document.getElementById("window").style.display="block";
+        document.getElementById("open").style.display="none";
+    }
+    function closeDiv(){
+        document.getElementById("window").style.display="none";
+        document.getElementById("open").style.display="block";
+    }
+</script>
+</body>
+</html>
